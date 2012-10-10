@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+    <![endif]-->
+
+    <%= stylesheet_link_tag "application", :media => "all" %>
+    <%= javascript_include_tag "http://fast.fonts.com/jsapi/eeba4c85-ee2b-4469-9c55-d12e6e329130.js", "http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js" %>
+
+    <%= javascript_include_tag "application" %>
+    <%= javascript_include_tag "http://maps.googleapis.com/maps/api/js?key=AIzaSyAvwvGsNwdGw7-rXMpYsee0mbuH5kF8b4w&sensor=false" %>
+  </head>
+
+  <body class="<%= page_classes %>">
+
+    <div id="wrap">
+
+      <header>
+        <div class="container">
+          <div class="row">
+            <div class="span12">
+              <ul class="nav">
+                <li><%= link_to "Home", "/index.html" %></li>
+                <li><%= link_to "About", "/about.html" %></li>
+                <li><%= link_to "Clients", "/clients.html" %></li>
+                <li><%= link_to "Work", "/work/index.html" %></li>
+                <li><%= link_to "Contact", "/contact.html" %></li>
+                <li id="do-great-things"><span>Do Great Things</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div id="main" class="container">
+        <div class="content">
+          <div class="row">
+            <div class="span4"><%= link_to "rapport", "/index.html", relative: true, id: 'rapport' %></div>
+          </div>
+          <div role="main"><%= yield %></div>
+        </div>
+      </div>
+
+    </div>
+
+    <footer>
+      <div class="container">
+        <div class="inner">
+        <%= link_to "Facebook", "http://www.facebook.com/pages/Rapport/333075496776162", class: 'facebook social sprite', title: 'Facebook' %>
+        <%= link_to "Twitter", "http://twitter.com/RapportEvents", class: 'twitter social sprite', title: 'Twitter' %>
+
+        <span class="copyright">© Rapport Events Ltd</span>
+        <span class="address">Fourways House   57 Hilton Street   Manchester   M1 2EJ</span>
+        <span class="contact-details">Telephone: 0161 236 0770   Email: <%= mail_to "hello@rapportevents.com" %></span>
+
+        <div class="awards sprite png">RAR Recommended</div>
+        <div class="awards sprite uk_event_awards_2010">UK Event Awards 2010 Winner</div>
+        <div class="awards sprite uk_event_awards_2011">UK Event Awards 2011 Finallist</div>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>

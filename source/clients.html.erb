@@ -1,0 +1,13 @@
+---
+title: Clients
+---
+
+<% @clients = %w[adidas capital-one astellas kelloggs rbs mands lloyds astra-zeneca british-gas natwest nord-anglia british-council] %>
+
+<div class="row">
+  <% @clients.each do |client| %>
+  <div class="span3 client">
+    <span style="background-image: url(<%= image_path("clients/#{client}.png") %>)"><%= client %></span>
+  </div>
+  <% end %>
+</div>

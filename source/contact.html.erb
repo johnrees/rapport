@@ -1,0 +1,60 @@
+---
+title: Contact
+---
+
+<script type="text/javascript">
+  //<![CDATA[
+  function initialize() {
+    var mapOptions = {
+      zoom: 13,
+      center: new google.maps.LatLng(53.48133, -2.23154
+),
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    }
+    var map = new google.maps.Map(document.getElementById('map_canvas'),
+                                  mapOptions);
+
+    var image = '<%= image_path 'latlng.png' %>';
+    var myLatLng = new google.maps.LatLng(53.48113, -2.23154
+);
+    var beachMarker = new google.maps.Marker({
+        position: myLatLng,
+        map: map,
+        icon: image,
+        clickable: false
+    });
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+  //]]>
+</script>
+
+<div class="row" style="margin-bottom: 20px;">
+  <div class="span7">
+
+    <div id="map">
+      <div id="map_canvas" style="width:100%; height:100%"></div>
+    </div>
+
+    <h4>Post</h4>
+    <p>Rapport Events Ltd, 57 Hilton Street, Manchester, Lancashire, M1 2EJ <%= link_to "View on Google", "https://plus.google.com/100094745229766138717/about" %></p>
+    <h4>Phone</h4>
+    <p>0161 236 0770</p>
+    <h4>Email</h4>
+    <p><%= mail_to "hello@rapportevents.com", "hello@rapportevents.com" %></p>
+    <h4>Elsewhere</h4>
+    <div style="overflow: hidden; margin: 5px 0">
+      <%= link_to "Facebook", "http://www.facebook.com/pages/Rapport/333075496776162", class: 'facebook social sprite' %>
+      <%= link_to "Facebook", "http://www.facebook.com/pages/Rapport/333075496776162" %>
+    </div>
+    <div>
+      <%= link_to "Twitter", "http://twitter.com/RapportEvents", class: 'twitter social sprite' %>
+      <%= link_to "Twitter", "http://twitter.com/RapportEvents" %>
+    </div>
+  </div>
+
+  <div class="span4 offset1 sidebar">
+    <%= partial "twitter" %>
+  </div>
+
+</div>
+

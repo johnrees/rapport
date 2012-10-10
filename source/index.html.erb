@@ -1,0 +1,19 @@
+---
+title: Rapport
+---
+
+<div class="row">
+  <div class="span12">
+    <div class="flexslider">
+      <ul class="slides">
+        <li>
+          <%= image_tag "homepage/opening_statement.jpg" %>
+        </li>
+
+        <% %w[mikes marks jennys chris].each do |name| %>
+        <li><a href="/work/<%= name %>-story/"><%= image_tag "/work/#{name}-story/slide.jpg" %></a></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>

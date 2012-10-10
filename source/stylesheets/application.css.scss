@@ -1,0 +1,255 @@
+$blue: #0083C8;
+
+@import "bootstrap";
+@import "clients";
+@import "about";
+@import "contact";
+@import "flexslider";
+@import "jquery.tweet";
+
+header nav li a {
+  font-weight: normal !important;
+}
+
+body {
+  font-family: "Amasis MT W01 Medium", Georgia, serif;
+  color: #7D7F82;
+  background: #AAAAAA image-url('bg.gif') repeat-y center top;
+  //
+  // font-family:'Amasis MT W01 Black';
+  // font-family:'Amasis MT W01 Bold';
+  // font-family:'Amasis MT W01 Medium';
+
+  a, a:active, a:visited, a:hover {
+    color: $blue;
+  }
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-weight: normal;
+  font-family: "Amasis MT W01 Bold", Georgia, serif;
+  color: $blue;
+  margin: 0;
+  font-size: 1em;
+}
+
+footer {
+  .inner {
+    border-top: 1px solid #AAA;
+    padding: 10px 0;
+    color: #AAA;
+    text-align: right;
+    overflow: hidden;
+    a {
+      color: #AAA;
+    }
+    span {
+      display: block;
+    }
+  }
+}
+
+.navbar {
+  text-transform: uppercase;
+}
+
+.logo {
+  color: #4C82C8;
+  font-size: 2em;
+  line-height: 2em;
+  font-weight: bold;
+}
+
+
+header {
+  font-family: "Amasis MT W01 Bold", Georgia, serif;
+  // font-family: Helvetica;
+  ul {
+    width: 100%;
+    border-bottom: 1px solid #bbbdc0;
+    overflow: hidden;
+  }
+  .nav li {
+    float: left;
+    display: inline;
+    margin: 0 27px 0 0;
+    padding: 0;
+    a {
+      color: #bbbdc0;
+      font-weight: normal;
+      font-size: 1.2em;
+      display: block;
+      padding: 20px 8px 8px 0;
+    }
+    a:hover {
+      background: none;
+      color: #bbbdc0;
+    }
+  }
+  li#do-great-things {
+    margin: 0;
+    float: right;
+  }
+}
+
+@mixin image-link($width, $height, $src) {
+  display: block;
+  width: $width;
+  height: $height;
+  background-image: image-url($src);
+  // if using Rails 3.x Asset Pipeline you can use the following instead
+  // background-image: image-url($src);
+  background-repeat: no-repeat;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  a {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+body.work a#rapport {
+  @include image-link(175px, 41px, "rapport-grey.png");
+}
+
+a#rapport {
+  @include image-link(175px, 41px, "rapport.png");
+  margin: 5px 0 20px;
+}
+
+#do-great-things {
+  span {
+    margin-top: 20px;
+    @include image-link(171px, 20px, "do-great-things-serif.png");
+  }
+}
+
+.sprite {
+  display:block;
+  float: left;
+  margin-right: 5px;
+  overflow:hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-image: image-url("sprite.png");
+  &.awards {
+    float: right;
+    margin: 10px 0 0 10px;
+  }
+  &.facebook {width:24px; height:23px; background-position: -2px -100px}
+  &.png {width:46px; height:32px; background-position: -2px -66px}
+  &.twitter {width:23px; height:23px; background-position: -28px -100px}
+  &.uk_event_awards_2010 {width:49px; height:30px; background-position: -2px -34px}
+  &.uk_event_awards_2011 {width:50px; height:30px; background-position: -2px -2px}
+}
+
+p {
+  display: block;
+  margin-bottom: 1em;
+}
+
+.sidebar h4 {
+  margin-bottom: 0.5em;
+}
+
+.cover {
+  height: 228px;
+  margin-bottom: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.white, .blue {
+  float: left;
+  clear: both;
+  padding: 2px 8px;
+  display: inline-block;
+  overflow: hidden;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  line-height: 1.2em;
+}
+
+.white {
+  background: white;
+  color: $blue;
+}
+.blue {
+  background: $blue;
+  color: white;
+}
+
+.inner {
+  padding: 15px;
+}
+
+.cover a {
+  position: absolute;
+  display: block;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  text-indent: -200px;
+}
+
+body.work {
+  color: $blue;
+  #main .row {
+    margin-bottom: 15px;
+    img {
+      margin-bottom: 15px;
+    }
+    img:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .bm {
+    margin-bottom: 15px !important;
+  }
+
+  .white, .blue {
+    font-size: 1.5em;
+    line-height: 1.5em;
+  }
+}
+
+.right {
+  float: right;
+}
+
+.row {
+  position: relative;
+}
+.client-logo {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+
+html, body {height: 100%;}
+#wrap {min-height: 100%;}
+#main {
+  // overflow:auto;
+  padding-bottom: 140px;
+}
+footer {
+  position: relative;
+  margin-top: -140px;
+  height: 140px;
+  clear:both;
+}
+// body:before {
+//   content:"";
+//   height:100%;
+//   float:left;
+//   width:0;
+//   margin-top:-32767px;
+// }
