@@ -6,7 +6,7 @@ title: Clients
 
 <div class="row">
   <% @clients.each do |client| %>
-  <div class="span3 client">
+  <div class="span2 client">
     <span style="background-image: url(<%= image_path("clients/#{client}.png") %>)"><%= client %></span>
   </div>
   <% end %>
