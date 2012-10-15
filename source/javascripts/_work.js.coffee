@@ -1,5 +1,5 @@
 jQuery ->
-  $('div[data-valign]').css('visiblity','hidden')
+  $('div[data-valign] *').css('color','#FFF')
 
   counter = 0
   $('body.work_index .cover').hide().each ->
@@ -25,4 +25,4 @@ $(window).load ->
     else
       $(this).css('margin-top', 0)
 
-    $(this).css('visiblity','visible')
+    $(this).find('*').css('color','inherit')
