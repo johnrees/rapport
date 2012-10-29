@@ -79,7 +79,7 @@ header {
       font-weight: normal;
       font-size: 1.2em;
       display: block;
-      padding: 20px 8px 8px 0;
+      padding: 20px 8px 4px 0;
     }
     a:hover {
       background: none;
@@ -114,25 +114,32 @@ body.work a#rapport {
   @include image-link(175px, 41px, "rapport-grey.png");
 }
 
-a#rapport {
+body a#rapport, body.work.work_index a#rapport {
   @include image-link(175px, 41px, "rapport.png");
   margin: 5px 0 20px;
 }
 
 #do-great-things {
-  span {
-    margin-top: 20px;
+  a {
     @include image-link(171px, 20px, "do-great-things-serif.png");
+    margin: 21px 0 0;
+    padding: 0;
   }
 }
 
-#follow-us {
+#follow-us, #like-us {
   display:block;
   float: left;
   background-repeat: no-repeat;
   background-image: image-url("follow-us-on-twitter.png");
   padding-left: 30px;
   height: 21px;
+  margin-bottom: 10px;
+}
+
+#like-us {
+  clear: both;
+  background-image: image-url("like-us-on-facebook.png");
 }
 
 .sprite {
@@ -166,8 +173,9 @@ p {
 }
 
 .cover {
-  height: 228px;
-  margin-bottom: 10px;
+  background-repeat: none;
+  height: 225px;
+  margin-bottom: 22px;
   position: relative;
   overflow: hidden;
 }
@@ -226,9 +234,20 @@ body.work {
     margin-bottom: 15px !important;
   }
 
+  .main-quote {
   .white, .blue {
+    font-size: 1.7em;
+    line-height: 1.7em;
+  }
+  }
+
+    .white, .blue {
     font-size: 1.3em;
     line-height: 1.5em;
+    }
+
+  .main-quote {
+    position: absolute;
   }
 }
 
@@ -268,4 +287,8 @@ footer {
 
 html {
   overflow-y: scroll;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
 }

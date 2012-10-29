@@ -28,11 +28,13 @@
             <div class="span12">
               <ul class="nav">
                 <li><%= link_to "Home", "/index.html" %></li>
-                <li><%= link_to "About", "/about.html" %></li>
-                <li><%= link_to "Clients", "/clients.html" %></li>
                 <li><%= link_to "Work", "/work/index.html" %></li>
+                <li><%= link_to "Clients", "/clients.html" %></li>
+                <li><%= link_to "About", "/about.html" %></li>
                 <li><%= link_to "Contact", "/contact.html" %></li>
-                <li id="do-great-things"><span>Do Great Things</span></li>
+                <li id="do-great-things">
+                  <%= link_to "Do Great Things", "/about.html" %>
+                </li>
               </ul>
             </div>
           </div>
@@ -56,14 +58,15 @@
         <%#= link_to "Facebook", "http://www.facebook.com/pages/Rapport/333075496776162", class: 'facebook social sprite', title: 'Facebook' %>
         <%#= link_to "Twitter", "http://twitter.com/RapportEvents", class: 'twitter social sprite', title: 'Twitter' %>
         <%= link_to "Follow us on Twitter", "http://twitter.com/RapportEvents", id: 'follow-us', title: 'Twitter' %>
+        <%= link_to "Like us on Facebook", "http://www.facebook.com/pages/Rapport/333075496776162", id: 'like-us', title: 'Facebook' %>
 
         <span class="copyright">© Rapport Events <%= Time.now.year %></span>
         <span class="address">Fourways House   57 Hilton Street   Manchester   M1 2EJ</span>
         <span class="contact-details">Telephone: 0161 236 0770   Email: <%= mail_to "hello@rapportevents.com" %></span>
 
-        <div class="awards sprite png">RAR Recommended</div>
+<!--         <div class="awards sprite png">RAR Recommended</div>
         <div class="awards sprite uk_event_awards_2010">UK Event Awards 2010 Winner</div>
-        <div class="awards sprite uk_event_awards_2011">UK Event Awards 2011 Finallist</div>
+        <div class="awards sprite uk_event_awards_2011">UK Event Awards 2011 Finallist</div> -->
         </div>
       </div>
     </footer>
