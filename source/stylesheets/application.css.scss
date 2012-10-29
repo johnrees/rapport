@@ -126,6 +126,15 @@ a#rapport {
   }
 }
 
+#follow-us {
+  display:block;
+  float: left;
+  background-repeat: no-repeat;
+  background-image: image-url("follow-us-on-twitter.png");
+  padding-left: 30px;
+  height: 21px;
+}
+
 .sprite {
   display:block;
   float: left;
@@ -168,24 +177,27 @@ p {
   clear: both;
   padding: 2px 8px;
   display: inline-block;
-  overflow: hidden;
-  margin-bottom: 5px;
+  // overflow: hidden;
+  // margin-bottom: 5px;
+  white-space:nowrap;
+  margin: 0 0 5px 0;
   text-transform: uppercase;
   font-size: 1.2em;
-  line-height: 1.2em;
+  // line-height: 1.2em;
 }
 
 .white {
-  background: white;
+  background: #FFF;
   color: $blue;
 }
 .blue {
   background: $blue;
-  color: white;
+  color: #FFF !important;
 }
 
 .inner {
   padding: 15px;
+  overflow: hidden;
 }
 
 .cover a {
@@ -215,7 +227,7 @@ body.work {
   }
 
   .white, .blue {
-    font-size: 1.5em;
+    font-size: 1.3em;
     line-height: 1.5em;
   }
 }
@@ -254,6 +266,6 @@ footer {
 //   margin-top:-32767px;
 // }
 
-body {
+html {
   overflow-y: scroll;
 }

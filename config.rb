@@ -4,6 +4,13 @@
 
 # Time.zone = "UTC"
 
+helpers do
+  def youtube id, height
+    "<iframe width='100%' height='#{height}' src='http://www.youtube.com/embed/#{id}?modestbranding=1&autohide=1&rel=0' frameborder='0' allowfullscreen></iframe>"
+
+  end
+end
+
 activate :deploy do |deploy|
   deploy.method = :rsync
   deploy.user = "deployer"

@@ -1,7 +1,7 @@
 ---
 title: Contact
 ---
-
+<%= javascript_include_tag "http://maps.googleapis.com/maps/api/js?key=AIzaSyAvwvGsNwdGw7-rXMpYsee0mbuH5kF8b4w&sensor=false" %>
 <script type="text/javascript">
   //<![CDATA[
   function initialize() {
@@ -36,17 +36,17 @@ title: Contact
     </div>
 
     <h4>Post</h4>
-    <p>Rapport Events Ltd, 57 Hilton Street, Manchester, Lancashire, M1 2EJ <%= link_to "View on Google", "https://plus.google.com/100094745229766138717/about" %></p>
+    <p>Rapport Events Ltd, 57 Hilton Street, Manchester, Lancashire, M1 2EJ<br/> <%= link_to "View on Google", "https://plus.google.com/100094745229766138717/about" %></p>
     <h4>Phone</h4>
     <p>0161 236 0770</p>
     <h4>Email</h4>
     <p><%= mail_to "hello@rapportevents.com", "hello@rapportevents.com" %></p>
     <h4>Elsewhere</h4>
-    <div style="overflow: hidden; margin: 5px 0">
+    <div style="overflow: hidden; margin: 5px 0" class="social">
       <%= link_to "Facebook", "http://www.facebook.com/pages/Rapport/333075496776162", class: 'facebook social sprite' %>
       <%= link_to "Facebook", "http://www.facebook.com/pages/Rapport/333075496776162" %>
     </div>
-    <div>
+    <div class="social">
       <%= link_to "Twitter", "http://twitter.com/RapportEvents", class: 'twitter social sprite' %>
       <%= link_to "Twitter", "http://twitter.com/RapportEvents" %>
     </div>

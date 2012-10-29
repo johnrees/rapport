@@ -12,7 +12,11 @@ ul.tweet_list {
     a { color: #b1b3b6; }
   }
   a {
-    color: #7d7f82;
+    color: #7d7f82 !important;
   }
 
+}
+
+.social a {
+  color: #7d7f82 !important;
 }
