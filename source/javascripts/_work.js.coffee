@@ -6,7 +6,7 @@ jQuery ->
     $(this).delay(counter * 200).fadeIn('slow')
     counter++
 
-  $('body #main').hide().fadeIn()
+  $('body #content').hide().fadeIn()
 
   counter = 0
   $('body.clients_index .client').hide().each ->
