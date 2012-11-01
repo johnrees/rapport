@@ -225,6 +225,7 @@ p {
 
 body.work {
   color: $blue;
+
   #main .row {
     margin-bottom: 15px;
     img {
@@ -234,29 +235,27 @@ body.work {
       margin-bottom: 0;
     }
   }
+
   .bm {
     margin-bottom: 15px !important;
   }
 
   .main-quote {
     z-index: 30;
-  .white, .blue {
-    font-size: 1.7em;
-    line-height: 1.7em;
-  }
-  .white {
-  background: 0;
-  margin-top: -12px;
-}
+    position: absolute;
+    .white, .blue {
+      font-size: 1.7em;
+      line-height: 1.7em;
+    }
+    .white {
+      background: 0;
+      margin-top: -12px;
+    }
   }
 
-    .white, .blue {
+  .white, .blue {
     font-size: 1.3em;
     line-height: 1.5em;
-    }
-
-  .main-quote {
-    position: absolute;
   }
 }
 
