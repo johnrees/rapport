@@ -25,4 +25,4 @@ $(window).load ->
     else
       $(this).css('margin-top', 0)
 
-    $(this).find('*').css('color','inherit')
+    $(this).find('*').css('color','#0083C8')

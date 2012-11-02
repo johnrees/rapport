@@ -182,6 +182,21 @@ p {
   margin-bottom: 22px;
   position: relative;
   overflow: hidden;
+  .inner {
+    position: relative;
+    z-index: 1;
+  }
+
+  a {
+    position: absolute;
+    display: block;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+    text-indent: -200px;
+  }
 }
 
 .white, .blue {
@@ -212,16 +227,6 @@ p {
   overflow: hidden;
 }
 
-.cover a {
-  position: absolute;
-  display: block;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  width: 100%;
-  text-indent: -200px;
-}
 
 body.work {
   color: $blue;
@@ -243,6 +248,7 @@ body.work {
   .main-quote {
     z-index: 30;
     position: absolute;
+    // margin-left: 0px;
     .white, .blue {
       font-size: 1.7em;
       line-height: 1.7em;
@@ -299,4 +305,8 @@ html {
 
 body {
   -webkit-font-smoothing: antialiased;
+}
+
+#content {
+  position: relative;
 }

@@ -13,7 +13,6 @@ title: Work
 
 <% page_articles.each_with_index do |article, i| %>
   <div class="cover" style="background-image: url('<%= "#{article.url}cover.jpg" %>');">
-    <%= link_to article.title, article, relative: true %>
     <div class="inner">
       <% lines = article.data.quote.split('\n').map(&:strip) %>
       <% lines.each_with_index do |line, index| %>
@@ -24,6 +23,7 @@ title: Work
       <span class="blue"><%= article.data.source %>,</span>
       <span class="blue"><%= article.data.company %></span>
     </div>
+    <%= link_to article.title, article, relative: true %>
   </div>
 <% end %>
 
