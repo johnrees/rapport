@@ -131,7 +131,7 @@ body a#rapport, body.work.work_index a#rapport {
   }
 }
 
-#follow-us, #like-us {
+#follow-us, #like-us, #hub {
   display:block;
   float: left;
   background-repeat: no-repeat;
@@ -144,6 +144,11 @@ body a#rapport, body.work.work_index a#rapport {
 #like-us {
   clear: both;
   background-image: image-url("like-us-on-facebook.png");
+}
+
+#hub {
+  clear: both;
+  background-image: image-url("hub.png");
 }
 
 .sprite {

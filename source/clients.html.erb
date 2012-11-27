@@ -2,12 +2,15 @@
 title: Clients
 ---
 
-<% @clients = %w[adidas capital-one astellas kelloggs rbs mands lloyds allergan british-gas natwest nord-anglia british-council bayer airline-services bbc kids-unlimited ikano elexon] %>
+<% @clients = %w[adidas capital-one astellas kelloggs rbs mands lloyds elexon british-gas natwest nord-anglia british-council ikano airline-services bbc kids-unlimited] %>
+<% @links = {'adidas' => 'james', 'capital-one' => 'marks', 'astellas' => 'jennys', 'kelloggs' => 'joannes'} %>
 
 <div class="row">
   <% @clients.each do |client| %>
-  <div class="span2 client">
-    <span style="background-image: url(<%= image_path("clients/#{client}.png") %>)"><%= client %></span>
-  </div>
+    <div class="span2 client">
+      <% if @links.has_key?(client) %><a href="/work/<%= @links[client] %>-story/"><% end %>
+      <span style="background-image: url(<%= image_path("clients/#{client}.png") %>)"><%= client %></span>
+      <% if @links.has_key?(client) %></a><% end %>
+    </div>
   <% end %>
 </div>
