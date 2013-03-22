@@ -3,4 +3,4 @@ jQuery ->
   $('.flexslider').flexslider
     animation: 'slide'
     pauseOnHover: false
-    slideshowSpeed: 4000
+    slideshowSpeed: 7000
