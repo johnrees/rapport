@@ -1,5 +1,5 @@
 jQuery ->
   $(".tweets").tweet
-    username: "RapportEvents"
+    username: "RapportAgency"
     count: 5
     template: "{text}{time}"
