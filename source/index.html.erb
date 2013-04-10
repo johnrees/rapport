@@ -6,9 +6,10 @@
         <li><a href="/new-account-manager"><%= image_tag "homepage/ellie.png" %></a></li>
         <!-- <li><%= image_tag "homepage/opening_statement.png" %></li> -->
         <li><%= image_tag "homepage/kelloggs_great_is.jpg" %></li>
+        <li><%= image_tag "homepage/allergan.jpg" %></li>
         <li><%= image_tag "homepage/AWARDWINNERS.jpg" %></li>
 
-        <% %w[stuarts joannes marks mikes].each do |name| %>
+        <% %w[stuarts joannes].each do |name| %>
         <li><a href="/work/<%= name %>-story/"><%= image_tag "/work/#{name}-story/slide.jpg" %></a></li>
         <% end %>
       </ul>
