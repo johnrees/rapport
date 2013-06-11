@@ -8,8 +8,8 @@
         <li><%= image_tag "homepage/allergan.jpg" %></li>
         <li><%= image_tag "homepage/AWARDWINNERS.jpg" %></li>
 
-        <% %w[stuarts joannes].each do |name| %>
-        <li><a href="/work/<%= name %>-story/"><%= image_tag "/work/#{name}-story/slide.jpg" %></a></li>
+        <% %w[capital-one-visionday-2012 kelloggs-2011].each do |name| %>
+        <li><a href="/work/<%= name %>/"><%= image_tag "/work/#{name}/slide.jpg" %></a></li>
         <% end %>
       </ul>
     </div>
