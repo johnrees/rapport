@@ -118,9 +118,14 @@ body.work a#rapport {
   @include image-link(175px, 41px, "rapport-grey.png");
 }
 
-body a#rapport, body.work.work_index a#rapport {
+body a#rapport {
   @include image-link(175px, 41px, "rapport.png");
-  margin: 5px 0 5px;
+  margin: 5px 0 20px;
+}
+
+body.work.work_index a#rapport {
+  @include image-link(175px, 41px, "rapport.png");
+  margin: 5px 0 5px !important;
 }
 
 #do-great-things {
