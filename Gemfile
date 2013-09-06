@@ -1,8 +1,9 @@
-source :rubygems
+ruby '2.0.0'
+source 'https://rubygems.org'
 
-gem "middleman", "~> 3.0.5"
-gem "middleman-blog", "~> 3.1.1"
-gem "middleman-deploy", "~>0.0.1"
+gem "middleman"
+gem "middleman-blog"
+gem "middleman-deploy"
 gem "middleman-smusher"
 
 # For feed.xml.builder
